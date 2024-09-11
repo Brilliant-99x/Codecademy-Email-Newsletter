@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codecademy-Email-Newsletter</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20%;
+}
+
+.inside-container {
+    width: 100%;
+}
+
+header {
+    background-color: blue;
+    color: wheat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+main {
+    background-color: rgb(16, 16, 66);
+    color: wheat;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 140px;
+    line-height: 35px;
+    font-size: large;
+}
+
+/*SEPARATE STYLES*/
+p {
+    font-size: larger;
+}
+
+.bold-links {
+    color: yellow;
+    font-weight: bold;
+}
+
+.no-style-links {
+    text-decoration: none;
+    color: black;
+}
+
+.dotted-line {
+    height: 25%;
+    width: 100%;
+}
+
+.static-btn {
+    background-color: rgb(16, 16, 66);
+    color: wheat;
+    border: 1px white solid;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#submit-btn {
+    background-color: yellow;
+    padding: 10px;
+    border: none;
+    width: 13%;
+}
+
+#submit-btn a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+
+/* ALL DIV-1 STYLES*/
+#div-1 {
+    padding: 30px;
+    padding-bottom: 0px;
+    line-height: 20px;
+}
+
+/* ALL DIV-2 STYLES*/
+#div-2 {
+    padding: 30px;
+}
+
+#div-2-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#div-2-2 img {
+    border-radius: 15px;
+}
+
+#div-2-2-1 {
+    width: 48%;
+}
+
+/* ALL DIV-3 STYLES*/
+#div-3 {
+    padding: 30px;
+}
+
+#div-3 img {
+    border-radius: 15px;
+}
+
+/* ALL DIV-4 STYLES*/
+#div-4 {
+    padding: 30px;
+}
+
+#div-4-4 {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#div-4-4-1 {
+    margin-left: 20px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+/* ALL DIV-5 STYLES*/
+#div-5 {
+    padding: 30px;
+}
+
+#div-5-5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#div-5-5 img {
+    border-radius: 15px;
+}
+
+#div-5-5-1 {
+    width: 48%;
+}
+
+/* ALL DIV-6 STYLES*/
+#div-6 {
+    padding: 0px;
+    border-bottom: 1px solid wheat;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#div-6-6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#div-6-6 img {
+    border-radius: 15px;
+}
+
+#div-6-6-1 {
+    width: 48%;
+}
+
+/* ALL DIV-7 STYLES*/
+#div-7 {
+    padding: 30px;
+
+}
+
+#div-7-7 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+
+#div-7-7-2 {
+    margin-left: 30px;
+}
+
+/* ALL DIV-8 STYLES*/
+#div-8 {
+    padding: 30px;
+}
+
+#div-8-8 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#div-8-8 img {
+    border-radius: 15px;
+}
+
+#div-8-8 p a {
+    color: yellow;
+}
+
+#div-8-8-1 {
+    width: 48%;
+}
+
+/* Responsive for tablet */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    header img {
+        width: 50%;
+    }
+    header h2 {
+        margin-top: 10%;
+    }
+
+    /* ALL DIV-2 STYLES*/
+#div-2-2 {
+    flex-direction: column;
+}
+#div-2-2 img {
+    width: 100%;
+}
+#div-2-2-1 {
+    width: 100%;
+}
+
+#submit-btn {
+    width: 50%;
+}
+
+#div-4-4 img {
+    width: 12%;
+}
+
+#div-5-5 {
+    flex-direction: column-reverse;
+    margin-top: 60px;
+}
+#div-5-5 img {
+    width: 100%;
+}
+#div-5-5-1 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#div-6-6 {
+    flex-direction: column-reverse;
+    margin-top: 60px;
+}
+#div-6-6 img {
+    width: 100%;
+}
+#div-6-6-1 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#div-7-7 {
+    margin-left: -1px;
+    margin-top: 35px;
+}
+#div-7-7-1 img {
+    width: 5em;
+}
+#div-7-7-2 {
+    margin-top: -20px;
+}
+#div-7-7-2 img {
+    width: 10%;
+}
+
+#div-8-8 {
+    flex-direction: column-reverse;
+}
+#div-8-8 img {
+    width: 100%;
+}
+#div-8-8-1 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer {
+    width: 100%;
+    font-size: 85%;
+    line-height: 1.8em;
+}
+}
+
+/* Responsive for mobile */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0 0%;
+    }
+    
+    header {
+        flex-direction: column;
+    }
+    header img {
+        width: 50%;
+    }
+    header h2 {
+        margin-top: 10%;
+    }
+
+    /* ALL DIV-2 STYLES*/
+#div-2-2 {
+    flex-direction: column;
+}
+#div-2-2 img {
+    width: 100%;
+}
+#div-2-2-1 {
+    width: 100%;
+}
+
+#submit-btn {
+    width: 50%;
+}
+
+#div-4-4 img {
+    width: 12%;
+}
+
+#div-5-5 {
+    flex-direction: column-reverse;
+    margin-top: 60px;
+}
+#div-5-5 img {
+    width: 100%;
+}
+#div-5-5-1 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#div-6-6 {
+    flex-direction: column-reverse;
+    margin-top: 60px;
+}
+#div-6-6 img {
+    width: 100%;
+}
+#div-6-6-1 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#div-7-7 {
+    margin-left: -1px;
+    margin-top: 35px;
+}
+#div-7-7-1 img {
+    width: 5em;
+}
+#div-7-7-2 {
+    margin-top: -20px;
+}
+#div-7-7-2 img {
+    width: 10%;
+}
+
+#div-8-8 {
+    flex-direction: column-reverse;
+}
+#div-8-8 img {
+    width: 100%;
+}
+#div-8-8-1 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer {
+    padding: 30px;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inside-container">
+            <header>
+                <img src="img/logo.png" alt="logo" height="100%" width="200px">
+                <h2>September 2024</h2>
+            </header>
+        
+            <main>
+                <div id="div-1"><br><br>
+                    <h2>School's in session</h2><br>
+                    <p>
+                        Whether you’re taking classes, teaching them, or looking to build new skills on your own, now’s a great time to recommit to learning.
+                        We’ve got the supplies you need - including newly updated courses, opportunities to collaborate on coding projects, and more. 
+                        Read on to get in the back-to-school spirit.<br>
+                        <br>
+                        Happy learning,<br> 
+                        The Codecademy Team<br><br><br>
+                    </p>
+                    <img class="dotted-line" src="img/dotted-line.png" alt="dotted-line"><br><br>
+                </div>
+                
+                <div id="div-2">
+                    <button class="static-btn">NEW AND UPDATED COURSES</button><br><br><br>
+                    <div id="div-2-2">
+                        <div id="div-2-2-1">
+                            <img src="img/image1.png" alt="image" width="100%"><br><br>
+                            <h2>Generative AI for Everyone</h2><br>
+                            <p>
+                                As more companies are making daily use of generative AI, our new skill path will teach you what it is, how it works, 
+                                and how to use it effectively through a technique called prompt engineering.<br>
+                            </p><br>
+                            <a class="bold-links" href="https://www.codecademy.com/learn/paths/generative-ai-for-everyone?utm_source=iterable&utm_medium=email&utm_campaign=september_2024_monthly_newsletter&utm_content=curriculum_2024_gen_ai_cta">
+                                Start skill path
+                            </a><br><br>
+                        </div>
+                        <div id="div-2-2-1">
+                            <img src="img/image2.png" alt="image" width="100%"><br><br>
+                            <h2>Learn Python 3</h2><br>
+                            <p>
+                                We’ve added more guidance and clarity to our Python 3 course — and updated the Python version throughout the course from Python 3.6 to Python 3.12.<br>
+                            </p><br>
+                            <a class="bold-links" href="https://www.codecademy.com/learn/learn-python-3?utm_source=iterable&utm_medium=email&utm_campaign=september_2024_monthly_newsletter&utm_content=curriculum_2024_learn_python3_cta">
+                                Start course
+                            </a><br>
+                        </div>
+                    </div><br><br>
+                    <img class="dotted-line" src="img/dotted-line.png" alt="dotted-line">
+                </div>
+        
+                <div id="div-3">
+                    <button class="static-btn">COMMUNITY</button><br><br><br>
+                    <img src="img/image3.png" alt="image" width="100%"><br><br><br>
+                    <h2>Find a partner for your next coding project</h2><br>
+                    <p>
+                        Want to collaborate with others who share your interests and support each other through challenges? 
+                        Visit the new Collaboration Corner to get connected and start building things together.
+                    </p><br>
+                    <button type="submit" id="submit-btn">
+                        <a href="https://www.codecademy.com/login?redirect=%2Foauth%2Fauthorize%3Fclient_id%3DHKphTl6wg3fWAasnXQezuulAXzsV9tV01tnoHqJlEeI%26redirect_uri%3Dhttps%253A%252F%252Fcommunity.codecademy.com%252Foauth2%252Fcallback%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%26state%3D7836354b9cf6046324ff1d40ff53ac0abc31340bc60b656a4643a64ab3d674d2">
+                            Check it out
+                        </a>
+                    </button><br><br><br><br>
+                    <img class="dotted-line" src="img/dotted-line.png" alt="dotted-line">
+                </div>
+        
+                <div id="div-4">
+                    <button class="static-btn">UPCOMING EVENTS</button><br><br>
+                        <div id="div-4-4">
+                            <img src="img/calender-icon.png" alt="calender-icon" width="5%">
+                            <div id="div-4-4-1">
+                                <h2>September 26</h2>
+                                <p>Codecademy Coding Hangout: Taylor Swift Coding Jam</p>
+                                <a class="bold-links" href="https://www.codecademy.com/login?redirect=%2Foauth%2Fauthorize%3Fclient_id%3DHKphTl6wg3fWAasnXQezuulAXzsV9tV01tnoHqJlEeI%26redirect_uri%3Dhttps%253A%252F%252Fcommunity.codecademy.com%252Foauth2%252Fcallback%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%26state%3D73a1ce98305d9eaab7867c12b810178d61031cc26318e4c2a091c17cd452ad66">
+                                    Register now
+                                </a>
+                            </div>
+                        </div><br><br>
+
+                        <div id="div-4-4">
+                            <img src="img/calender-icon.png" alt="calender-icon" width="5%">
+                            <div id="div-4-4-1">
+                                <h2>September 26</h2>
+                                <p>Python for Beginners Workshop</p>
+                                <a class="bold-links" href="https://www.codecademy.com/login?redirect=%2Foauth%2Fauthorize%3Fclient_id%3DHKphTl6wg3fWAasnXQezuulAXzsV9tV01tnoHqJlEeI%26redirect_uri%3Dhttps%253A%252F%252Fcommunity.codecademy.com%252Foauth2%252Fcallback%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%26state%3Db79d0f165755c0a1c218164a9aaa09e1709aad98d32b3da13928c9cd227fd829">
+                                    Register now
+                                </a>
+                            </div>
+                        </div><br><br><br>
+                    <img class="dotted-line" src="img/dotted-line.png" alt="dotted-line">
+                </div>
+        
+                <div id="div-5">
+                    <button class="static-btn">YEAR-ROUND DISCOUNT</button><br>
+                    <div id="div-5-5">
+                        <div id="div-5-5-1">
+                            <h2>High school students can save with Pro Student</h2><br>
+                            <p>
+                                Our student discount is now available for high schoolers, too! 
+                                Eligible high school and college students can get complete access to all Pro courses and features for over 35% off the regular price.
+                            </p><br>
+                            <a class="bold-links" href="https://www.codecademy.com/student-center?utm_source=iterable&utm_medium=email&utm_campaign=september_2024_monthly_newsletter&utm_content=student_center_cta">
+                                Learn more at the Student Center
+                            </a>
+                        </div>
+                        <img src="img/image4.png" alt="image" width="50%">
+                    </div><br><br><br>
+                    <img class="dotted-line" src="img/dotted-line.png" alt="dotted-line"><br><br>
+                </div>
+        
+                <div id="div-6">
+                    <button class="static-btn">FROM THE BLOG</button>
+                    <div id="div-6-6">
+                        <div id="div-6-6-1">
+                            <h2>9 Tips for Students Looking for a Side Hustle in Tech</h2><br>
+                            <p>
+                                Freelancing is a great opportunity to earn money and get your career off the ground. 
+                                We’ve collected some advice for college students and new developers looking to get started.
+                            </p><br>
+                            <a class="bold-links" href="https://www.codecademy.com/resources/blog/student-freelance-tips/?utm_source=iterable&utm_medium=email&utm_campaign=september_2024_monthly_newsletter&utm_content=blog_student_tips_cta">
+                                Read now
+                            </a>
+                        </div>
+                        <img src="img/image5.png" alt="image" width="43%">
+                    </div><br><br><br><br>
+                </div>
+        
+                <div id="div-7">
+                    <div id="div-7-7">
+                        <div id="div-7-7-1">
+                            <img src="img/profile-image.png" alt="profile-image" width="100%">
+                        </div>
+                        <div id="div-7-7-2">
+                            <img src="img/quote-icon.png" alt="quote-icon" width="5%"><br><br>
+                            <h2>What drew me to Codecademy was the interactivity. It felt like students could make meaningful progress on their own.</h2><br><br>
+                            <p>
+                                <strong>Tobin Shields</strong><br>
+                                High School Teacher and Professor<br> 
+                                Portland, Oregon<br>
+                            </p><br>
+                            <a class="bold-links" href="https://www.codecademy.com/resources/blog/using-codecademy-to-teach-high-school-computer-science/?utm_source=iterable&utm_medium=email&utm_campaign=september_2024_monthly_newsletter&utm_content=learner_story_cta">
+                                Read more
+                            </a>
+                        </div>
+                    </div><br><br><br>
+                    <img class="dotted-line" src="img/dotted-line.png" alt="dotted-line">
+                </div>
+        
+                <div id="div-8">
+                    <div id="div-8-8">
+                        <div id="div-8-8-1">
+                            <h2>Take our annual survey and be entered to win $100</h2><br><br>
+                            <p>
+                                Skillsoft is conducting a study on tech skills, certifications, and salary trends — and we need your help. 
+                                Take our annual <a href="#">IT Skills and Salary survey</a> now to help us uncover the latest industry insights. 
+                                As a thank you, you’ll be entered for the chance to win a $100 gift card
+                            </p><br>
+                            <a class="bold-links" href="https://surveys.skillsoft.com/jfe/form/SV_6QFQTsiWCpomQTk?RefID=codecademy-email">
+                                Take the survey
+                            </a>
+                        </div>
+                        <img src="img/image6.png" alt="image" width="43%">
+                    </div>
+                </div><br><br><br>
+            </main>
+        
+            <footer>
+                <P>
+                    Stay connected: <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Facebook</a> | <a id="forums" href="#">Forums</a> | <a id="tiktok" href="#">TikTok</a><br>
+                </P>
+                <P>
+                    <a class="no-style-links" href="#">View web version</a> | <a class="no-style-links" href="#">Email preferences</a> | <a class="no-style-links" href="#">Unsubscribe</a> | <a class="no-style-links" id="privacy" href="#">Privacy policy</a><br>
+                </P>
+                <P>
+                    Copyright Codecademy. All rights reserved.<br>
+                </P>
+                <P>
+                    300 Innovative Way, Suite 2210, Nashua, NH 03062<br>
+                </P>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
